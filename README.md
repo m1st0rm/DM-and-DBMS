@@ -109,6 +109,7 @@
         <li>ID издательства (INT, FK) - Связь многие к одному с Publisher</li>
         <li>ISBN (VARCHAR)</li>
         <li>Дата публикации (DATE)</li>
+        <li>Описание (VARCHAR)</li>
     </ul>
     <h3>Сущность "Автор" (Author)</h3>
     <ul>
