@@ -92,7 +92,7 @@
     <h2>Описание сущностей БД</h2>
     <h3>Сущность "Пользователь" (User)</h3>
     <ul>
-        <li>ID пользователя (INT, PK) - </li>
+        <li>ID пользователя (INT, PK) - связь один к одному UserActionLog, связь один ко многим с Review</li>
         <li>Имя (VARCHAR)</li>
         <li>Фамилия (VARCHAR)</li>
         <li>Email (VARCHAR)</li>
@@ -168,6 +168,13 @@
     <li>Номер карты (VARCHAR)</li>
     <li>Дата выдачи (DATE)</li>
     <li>Срок действия (DATE)</li>
+</ul>
+<h3>Сущность "Журнал действий пользователя" (UserActionLog)</h3>
+<ul>
+    <li>ID действия (INT, PK)</li>
+    <li>ID пользователя (INT, FK) - Связь один к одному с User </li>
+    <li>Время и дата действия (DATETIME)</li>
+    <li>Описание действия (VARCHAR)</li>
 </ul>
 </body>
 </html>
