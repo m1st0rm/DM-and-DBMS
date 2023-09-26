@@ -105,8 +105,8 @@
     <ul>
         <li>ID книги (INT, PK)</li> - Связь многие ко многим с AuthorBook, связь один к многим с BookCopy, связь один к многим с Review, связть один к многим с BookReport</li>
         <li>Название (VARCHAR)</li>
-        <li>Жанр (VARCHAR)</li>
-        <li>Издательство (VARCHAR)</li>
+        <li>ID жанра (INT, FK) - Связь многие к одному с Genre</li>
+        <li>ID издательства (INT, FK) - Связь многие к одному с Publisher</li>
         <li>ISBN (VARCHAR)</li>
         <li>Дата публикации (DATE)</li>
     </ul>
@@ -149,12 +149,12 @@
 </ul>
 <h3>Сущность "Жанр" (Genre)</h3>
 <ul>
-    <li>ID жанра (INT, PK)</li>
+    <li>ID жанра (INT, PK) - Связь один к многим с Book</li>
     <li>Название жанра (VARCHAR)</li>
 </ul>
 <h3>Сущность "Издательство" (Publisher)</h3>
 <ul>
-    <li>ID издательства (INT, PK)</li>
+    <li>ID издательства (INT, PK) - Связь один к многим с Book</li>
     <li>Название издательства (VARCHAR)</li>
 </ul>
 <h3>Сущность "Роль" (Role)</h3>
