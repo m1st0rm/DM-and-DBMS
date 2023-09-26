@@ -92,7 +92,7 @@
     <h2>Описание сущностей БД</h2>
     <h3>Сущность "Пользователь" (User)</h3>
     <ul>
-        <li>ID пользователя (INT, PK) - связь один к одному UserActionLog, связь один ко многим с Review</li>
+        <li>ID пользователя (INT, PK) - связь один к многим UserActionLog, связь один к многим с Review</li>
         <li>Имя (VARCHAR)</li>
         <li>Фамилия (VARCHAR)</li>
         <li>Email (VARCHAR)</li>
