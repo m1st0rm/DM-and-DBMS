@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+![new drawio](https://github.com/m1st0rm/DM-and-DBMS/assets/94941809/eb063631-b4b8-4cf6-adff-034e75e52691)<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -176,6 +176,10 @@
     <li>ID пользователя (INT, FK) - Связь один к одному с User </li>
     <li>Время и дата действия (DATETIME)</li>
     <li>Описание действия (VARCHAR)</li>
+    <h2>Схема БД</h2>
+    <img src = "https://github.com/m1st0rm/DM-and-DBMS/assets/94941809/3873911d-995e-421e-8ed4-bf7aa1f5ed7a">
+
+
 </ul>
 </body>
 </html>
