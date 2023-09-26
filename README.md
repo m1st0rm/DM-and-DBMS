@@ -1,4 +1,4 @@
-![new drawio](https://github.com/m1st0rm/DM-and-DBMS/assets/94941809/eb063631-b4b8-4cf6-adff-034e75e52691)<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
