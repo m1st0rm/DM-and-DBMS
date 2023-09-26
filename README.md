@@ -89,6 +89,88 @@
             </ul>
         </li>
     </ol>
-    
+    <h2>Описание сущностей БД</h2>
+    <h3>Сущность "Пользователь" (User)</h3>
+    <ul>
+        <li>ID пользователя (INT, PK)</li>
+        <li>Имя (VARCHAR)</li>
+        <li>Фамилия (VARCHAR)</li>
+        <li>Email (VARCHAR)</li>
+        <li>Пароль (VARCHAR)</li>
+        <li>Дата регистрации (DATE)</li>
+        <li>ID библиотечной карты (INT, FK) - Связь один к одному с LibraryCard</li>
+        <li>ID роли (INT, FK) - Связь один к одному с Role</li>
+    </ul>
+    <h3>Сущность "Книга" (Book)</h3>
+    <ul>
+        <li>ID книги (INT, PK)</li>
+        <li>Название (VARCHAR)</li>
+        <li>Автор (VARCHAR)</li>
+        <li>Жанр (VARCHAR)</li>
+        <li>Издательство (VARCHAR)</li>
+        <li>ISBN (VARCHAR)</li>
+        <li>Дата публикации (DATE)</li>
+    </ul>
+    <h3>Сущность "Автор" (Author)</h3>
+    <ul>
+        <li>ID автора (INT, PK)</li>
+        <li>Имя (VARCHAR)</li>
+        <li>Фамилия (VARCHAR)</li>
+    </ul>
+    <h3>Сущность "Автор-Книга" (AuthorBook)</h3>
+    <ul>
+        <li>ID записи (INT, PK)</li>
+        <li>ID автора (INT, FK) - Связь многие ко многим с Author</li>
+        <li>ID книги (INT, FK) - Связь многие ко многим с Book</li>
+    </ul>
+    <h3>Сущность "Экземпляр книги" (BookCopy)</h3>
+<ul>
+    <li>ID экземпляра (INT, PK)</li>
+    <li>ID книги (INT, FK) - Связь многие к одному с Book</li>
+    <li>Состояние (VARCHAR)</li>
+    <li>Дата возврата (DATE)</li>
+    <li>Дата выдачи (DATE)</li>
+</ul>
+<h3>Сущность "Отзыв книги" (Review)</h3>
+<ul>
+    <li>ID отзыва (INT, PK)</li>
+    <li>ID книги (INT, FK) - Связь многие к одному с Book</li>
+    <li>ID пользователя (INT, FK) - Связь многие к одному с User</li>
+    <li>Оценка (INT)</li>
+    <li>Текст отзыва (TEXT)</li>
+    <li>Дата отзыва (DATE)</li>
+</ul>
+<h3>Сущность "Отчет о популярности книги" (BookReport)</h3>
+<ul>
+    <li>ID отчета (INT, PK)</li>
+    <li>ID книги (INT, FK) - Связь многие к одному с Book</li>
+    <li>Количество просмотров (INT)</li>
+    <li>Количество скачиваний (INT)</li>
+    <li>Дата отчета (DATE)</li>
+</ul>
+<h3>Сущность "Жанр" (Genre)</h3>
+<ul>
+    <li>ID жанра (INT, PK)</li>
+    <li>Название жанра (VARCHAR)</li>
+</ul>
+<h3>Сущность "Издательство" (Publisher)</h3>
+<ul>
+    <li>ID издательства (INT, PK)</li>
+    <li>Название издательства (VARCHAR)</li>
+</ul>
+<h3>Сущность "Роль" (Role)</h3>
+<ul>
+    <li>ID роли (INT, PK)</li>
+    <li>ID пользователя (INT, FK) - Связь многие к одному с User</li>
+    <li>Название роли (VARCHAR)</li>
+</ul>
+<h3>Сущность "Библиотечная карта" (LibraryCard)</h3>
+<ul>
+    <li>ID карты (INT, PK)</li>
+    <li>ID пользователя (INT, FK) - Связь один к одному с User</li>
+    <li>Номер карты (VARCHAR)</li>
+    <li>Дата выдачи (DATE)</li>
+    <li>Срок действия (DATE)</li>
+</ul>
 </body>
 </html>
