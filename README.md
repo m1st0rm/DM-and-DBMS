@@ -109,7 +109,7 @@
     </ul>
     <h3>Сущность "Книга" (Book)</h3>
     <ul>
-        <li>ID книги (INT, PK)</li> - Связь многие ко многим с AuthorBook, связь один к многим с BookCopy, связь один к многим с Review, связть один к многим с BookReport, связь один к многим с Favorite</li>
+        <li>ID книги (INT, PK)</li> - Связь один к многим с AuthorBook, связь один к многим с BookCopy, связь один к многим с Review, связть один к многим с BookReport, связь один к многим с Favorite</li>
         <li>Название (VARCHAR)</li>
         <li>ID жанра (INT, FK) - Связь многие к одному с Genre</li>
         <li>ID издательства (INT, FK) - Связь многие к одному с Publisher</li>
@@ -119,15 +119,15 @@
     </ul>
     <h3>Сущность "Автор" (Author)</h3>
     <ul>
-        <li>ID автора (INT, PK) - Связь многие к многим с AuthorBook</li>
+        <li>ID автора (INT, PK) - Связь один к многим с AuthorBook</li>
         <li>Имя (VARCHAR)</li>
         <li>Фамилия (VARCHAR)</li>
     </ul>
     <h3>Сущность "Автор-Книга" (AuthorBook)</h3>
     <ul>
         <li>ID записи (INT, PK)</li>
-        <li>ID автора (INT, FK) - Связь многие ко многим с Author</li>
-        <li>ID книги (INT, FK) - Связь многие ко многим с Book</li>
+        <li>ID автора (INT, FK) - Связь многие к одному с Author</li>
+        <li>ID книги (INT, FK) - Связь многие к одному с Book</li>
     </ul>
     <h3>Сущность "Экземпляр книги" (BookCopy)</h3>
 <ul>
@@ -183,7 +183,7 @@
     <li>Время и дата действия (DATETIME)</li>
     <li>Описание действия (VARCHAR)</li>
     <h2>Схема БД</h2>
-    <img src = "https://github.com/m1st0rm/DM-and-DBMS/assets/94941809/3873911d-995e-421e-8ed4-bf7aa1f5ed7a">
+    <img src = "https://github.com/m1st0rm/DM-and-DBMS/assets/94941809/c960e85b-73b8-474a-a067-7f0e6c067952">
 
 
 </ul>
