@@ -92,7 +92,7 @@
     <h2>Описание сущностей БД</h2>
     <h3>Сущность "Пользователь" (User)</h3>
     <ul>
-        <li>ID пользователя (INT, PK) - связь один к многим UserActionLog, связь один к многим с Review</li>
+        <li>ID пользователя (INT, PK) - связь один к многим с UserActionLog, связь один к многим с Review, связь один к многим с Favorites</li>
         <li>Имя (VARCHAR)</li>
         <li>Фамилия (VARCHAR)</li>
         <li>Email (VARCHAR)</li>
@@ -101,9 +101,15 @@
         <li>ID библиотечной карты (INT, FK) - Связь один к одному с LibraryCard</li>
         <li>ID роли (INT, FK) - Связь многие к одному с Role</li>
     </ul>
+    <h3>Сущность "Избранное" (Favorites)</h3>
+    <ul>
+        <li>ID записи (INT, PK)</li>
+        <li>ID пользователя (INT, FK) - Связь многие к одному с User</li>
+        <li>ID книги (INT, FK) - Связь многие к одному с Book</li>
+    </ul>
     <h3>Сущность "Книга" (Book)</h3>
     <ul>
-        <li>ID книги (INT, PK)</li> - Связь многие ко многим с AuthorBook, связь один к многим с BookCopy, связь один к многим с Review, связть один к многим с BookReport</li>
+        <li>ID книги (INT, PK)</li> - Связь многие ко многим с AuthorBook, связь один к многим с BookCopy, связь один к многим с Review, связть один к многим с BookReport, связь один к многим с Favorites</li>
         <li>Название (VARCHAR)</li>
         <li>ID жанра (INT, FK) - Связь многие к одному с Genre</li>
         <li>ID издательства (INT, FK) - Связь многие к одному с Publisher</li>
