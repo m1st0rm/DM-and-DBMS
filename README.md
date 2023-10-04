@@ -109,7 +109,7 @@
     </ul>
     <h3>Сущность "Книга" (Book)</h3>
     <ul>
-        <li>ID книги (INT, PK)</li> - Связь один к многим с AuthorBook, связь один к многим с BookCopy, связь один к многим с Review, связть один к многим с BookReport, связь один к многим с Favorite</li>
+        <li>ID книги (INT, PK)</li> - Связь многие к многим с Author через таблицу AuthorBook, связь один к многим с BookCopy, связь один к многим с Review, связть один к многим с BookReport, связь один к многим с Favorite</li>
         <li>Название (VARCHAR)</li>
         <li>ID жанра (INT, FK) - Связь многие к одному с Genre</li>
         <li>ID издательства (INT, FK) - Связь многие к одному с Publisher</li>
@@ -119,7 +119,7 @@
     </ul>
     <h3>Сущность "Автор" (Author)</h3>
     <ul>
-        <li>ID автора (INT, PK) - Связь один к многим с AuthorBook</li>
+        <li>ID автора (INT, PK) - Связь многие к многим с Book через таблицу AuthorBook</li>
         <li>Имя (VARCHAR)</li>
         <li>Фамилия (VARCHAR)</li>
     </ul>
