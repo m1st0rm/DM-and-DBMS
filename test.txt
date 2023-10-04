@@ -1,0 +1,1 @@
+test content for Lab1_Task6_test.py
