@@ -123,7 +123,7 @@
         <li>Имя (VARCHAR)</li>
         <li>Фамилия (VARCHAR)</li>
     </ul>
-    <h3>Сущность "Автор-Книга" (AuthorBook)</h3>
+    <h3>Сущность "Автор-Книга" (AuthorBook) - промежуточная таблица между таблицами Book и Author</h3>
     <ul>
         <li>ID записи (INT, PK)</li>
         <li>ID автора (INT, FK) - Связь многие к одному с Author</li>
